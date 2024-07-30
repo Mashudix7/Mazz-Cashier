@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #232323;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Style for image */
+.image {
+  text-align: center; /* Center the image horizontally */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.image img {
+  max-width: 23%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px; /* Adjust the max width as needed */
+  padding: 20px;
+  background-color: #2e2e2e;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Header Styles */
+h1 {
+  color: #00e5ff;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00e5ff;
+  padding-bottom: 10px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #3a3a3a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #4d4d4d;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #00e5ff;
+  color: #232323;
+  font-size: 18px;
+}
+
+tr:hover {
+  background-color: #4a4a4a;
+}
+
+/* Button and Link Styles */
+a,
+.btn {
+  color: #00e5ff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px 0;
+  border: 1px solid #00e5ff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #2e2e2e;
+}
+
+a:hover,
+.btn:hover {
+  background-color: #00e5ff;
+  color: #232323;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styles */
+form label {
+  display: block;
+  margin-top: 15px;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #00e5ff;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus {
+  border-color: #00bcd4;
+  background-color: #333;
+  outline: none;
+}
+
+form button[type="submit"] {
+  background-color: #00e5ff;
+  color: #232323;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #007a99;
+  transform: scale(1.05);
+}
+
+/* Additional Styles */
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ff5722;
+  color: #fff;
+  animation: slideIn 0.5s ease-out;
+}
+
+.message.success {
+  background-color: #4caf50;
+}
+
+.message.error {
+  background-color: #f44336;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .btn,
+  a {
+    padding: 8px 16px;
+  }
+
+  form input[type="text"],
+  form input[type="password"],
+  form input[type="number"],
+  form button[type="submit"] {
+    padding: 8px;
+  }
+}

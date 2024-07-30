@@ -1,0 +1,4 @@
+admin|admin123|admin
+user|user123|user
+masss|masss|user
+admin|admin123|user
